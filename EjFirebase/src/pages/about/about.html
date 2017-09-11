@@ -1,11 +1,35 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="dark" align=center>
     <ion-title>
-      About
+        Lista de Personas 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Nombre:</ion-label>
+    <ion-input type="text"  [(ngModel)]="persona.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Edad:</ion-label>
+    <ion-input type="number"  [(ngModel)]="persona.edad"></ion-input>
+  </ion-item>
+  <br> 
+  <button ion-button full (click)="agregarPersona()">Guardar</button>
+  <br><br>
+
+  <ion-card>
+    <ion-card-header align=center>
+      <b>Lista de personas</b>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item-group>
+        <ion-item *ngFor="let item of dato | async">{{item.nombre}} - {{item.edad}}</ion-item>
+      </ion-item-group>
+    </ion-card-content> 
+  </ion-card>
 
 </ion-content>
