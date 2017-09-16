@@ -35,7 +35,7 @@ export class HomePage {
   
   desloguear()
   {
-
+       //a completar
   }
 
 

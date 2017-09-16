@@ -19,5 +19,7 @@ export class AboutPage {
   }
 
   agregarPersona()
-  {}
+  {
+    //a completar
+  }
 }
